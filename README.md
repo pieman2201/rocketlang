@@ -1,2 +1,0 @@
-# rocketlang
-Wow! Nice shot!
