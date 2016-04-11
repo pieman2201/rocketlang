@@ -1,0 +1,19 @@
+I got it!         = Output from current
+Centering...      = Pop to current
+Take the shot!    = Input to current
+Defending...      = Push from current
+
+Nice shot!        = If start
+Great Pass!       = Loop start
+Thanks!           = Loop end
+What a save!      = If end
+
+$#@%!             = Error
+No Problem.       = Ignore errors
+Whoops...         = Equalize currents
+Sorry!            = Print debug info
+
+OMG!              = Switch current
+Noooo!            = Push 0
+Wow!              = Add 1 to current
+Close one!        = Add -1 to current
