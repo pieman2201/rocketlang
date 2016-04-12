@@ -3,9 +3,11 @@ A programming language based on Rocket League quick chat.
 ## Why?
 Why not?
 ## How to
-1. Download the interpreter
-2. Write your rocketlang program (*.rekt)
-3. `$ interpreter [path to file]`
+1. Download the source
+2. Download and install Go
+3. `go build interpreter.go`
+4. Write your rocketlang program (*.rekt)
+5. `$ interpreter [path to file]`
 
 ## Overview
 rocketlang consists of 2 variables and a stack. These variables can be pushed to the stack and the stack can pop to them. Only one of the variables is modified at a time. To modify the other variable, one must switch which variable is in use.
