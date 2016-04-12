@@ -5,7 +5,7 @@ Why not?
 ## How to
 1. Download the source
 2. Download and install Go
-3. `go build interpreter.go`
+3. `$ go build interpreter.go`
 4. Write your rocketlang program (*.rekt)
 5. `$ interpreter [path to file]`
 
