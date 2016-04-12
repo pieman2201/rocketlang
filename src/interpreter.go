@@ -31,8 +31,8 @@ func input(prompt string) string {
 
 func inform() {
     erl = erl + "S#@" + string(37) + "! " + strconv.Itoa(ind)
-    fmt.Println("\n" + erl)
     if err {
+        fmt.Println("\n" + erl)
         os.Exit(1)
     }
 }
@@ -123,7 +123,7 @@ func interpret(line string) {
     case "Sorry!":
         fmt.Println(stk, cr1, cr2, crc)
     case "No Problem.":
-        err = false
+        err = !err
     case "Whoops...":
         if crc == 0 {
             cr2 = cr1
