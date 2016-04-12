@@ -30,9 +30,9 @@ func input(prompt string) string {
 }
 
 func inform() {
-    erl = erl + "S#@" + string(byte(37)) + "! " + strconv.Itoa(ind)
+    erl = erl + "S#@" + string(37) + "! " + strconv.Itoa(ind)
+    fmt.Println("\n" + erl)
     if err {
-        fmt.Println(erl)
         os.Exit(1)
     }
 }
@@ -50,11 +50,7 @@ func pop() int {
     toPop := 0
     if len(stk) > 0 {
         toPop = stk[0]
-        tempStk := make([]int, len(stk) - 1)
-        for i, val := range stk[1:] {
-            tempStk[i] = val
-        }
-        stk = tempStk
+        stk = stk[1:]
     } else {
         inform()
     }
@@ -141,20 +137,25 @@ func interpret(line string) {
     } else if crc == 1 {
         cr2 = cur
     }
-    //fmt.Println(cr1, cr2)
 }
 
 func main() {
-    barray, _ := ioutil.ReadFile(input("Code:  "))
-    
+    path := ""
+    if len(os.Args) > 1 {
+        path = os.Args[1]
+    } else {
+        inform()
+    }
+    barray, _ := ioutil.ReadFile(path)
     cms = strings.Split(string(barray), "\n")
-
-    inp = input("Input: ")
+    for _, cm := range cms {
+        if cm == "Take the shot!" {
+            inp = input("Input: ")
+            break
+        }
+    }
     for ind < len(cms) {
-        //fmt.Println(cms[ind], stk, cr1, cr2)
         interpret(cms[ind])
-        //fmt.Println(cms[ind], stk, cr1, cr2)
         ind++
     }
-    fmt.Println()
 }
