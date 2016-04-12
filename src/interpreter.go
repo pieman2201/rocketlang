@@ -20,8 +20,6 @@ var ind = 0
 
 var err = true
 
-var erl string
-
 func input(prompt string) string {
     reader := bufio.NewReader(os.Stdin)
     fmt.Print(prompt)
@@ -30,7 +28,7 @@ func input(prompt string) string {
 }
 
 func inform() {
-    erl = erl + "S#@" + string(37) + "! " + strconv.Itoa(ind)
+    erl := "S#@" + string(37) + "! " + strconv.Itoa(ind)
     if err {
         fmt.Println("\n" + erl)
         os.Exit(1)
