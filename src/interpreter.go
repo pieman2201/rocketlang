@@ -28,7 +28,11 @@ func input(prompt string) string {
 }
 
 func inform() {
-    erl := "S#@" + string(37) + "! " + strconv.Itoa(ind)
+    secStr := " second"
+    if ind != 0 {
+        secStr = secStr + "s"
+    }
+    erl := "S#@" + string(37) + "!\nChat disabled for " + strconv.Itoa(ind + 1) + secStr + ".\n"
     if err {
         fmt.Println("\n" + erl)
         os.Exit(1)
