@@ -1,13 +1,9 @@
 *
 !*.*
-!dist/*
 
 *.rekt
-!scripts/*.rekt
 
 *.go
-!src/*.go
-
 
 prepare.sh
 
