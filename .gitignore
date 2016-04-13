@@ -1,9 +1,6 @@
-*
-!*.*
-
 *.rekt
-
 *.go
 
+interpreter
 prepare.sh
 
