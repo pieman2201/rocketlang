@@ -132,6 +132,8 @@ func interpret(line string) {
         } else if crc == 1 {
             cr1 = cr2
         }
+    default:
+        inform()
     }
 
     if crc == 0 {
