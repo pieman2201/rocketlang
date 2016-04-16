@@ -133,7 +133,16 @@ func interpret(line string) {
             cr1 = cr2
         }
     default:
-        inform()
+        isBlank := true
+        for _, char := range line {
+            if char != ' ' {
+                isBlank = false
+                break
+            }
+        }
+        if !isBlank {
+            inform()
+        }
     }
 
     if crc == 0 {
