@@ -1,3 +1,4 @@
+//Build and run to use rocketlang
 package main
 
 import(
